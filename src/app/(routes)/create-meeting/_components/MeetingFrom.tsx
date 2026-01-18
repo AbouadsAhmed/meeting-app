@@ -50,6 +50,7 @@ const MeetingFrom = ({ setFormValue }: MeetingFromProps) => {
       programUrl,
       meetingId: doc(db, "Meeting", user?.email),
       createdBy: user?.email,
+      id: date,
     }).then((res) => {
       toast("new meeting aded!");
       router.push("/dashboard/meeting-type");

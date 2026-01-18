@@ -3,6 +3,7 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { app } from "@/app/config/firebaseConsole";
 import { useEffect } from "react";
+import MeetintType from "./meeting-type/page";
 
 const Dashboard = () => {
   const { user } = useKindeBrowserClient();
@@ -28,7 +29,11 @@ const Dashboard = () => {
     meetingRegisterd();
   }, [user]);
 
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <MeetintType />
+    </div>
+  );
 };
 
 export default Dashboard;

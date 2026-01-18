@@ -1,4 +1,4 @@
-import { Imenu, Iprogram } from "@/interfaces";
+import { IDays, Imenu, Iprogram } from "@/interfaces";
 import { CalendarRange, Presentation, TimerIcon } from "lucide-react";
 
 export const menu: Imenu[] = [
@@ -33,5 +33,30 @@ export const programs: Iprogram[] = [
   {
     name: "zoom",
     icon: "/business.png",
+  },
+];
+export const days: IDays[] = [
+  {
+    day: "sunday",
+  },
+
+  {
+    day: "monday",
+  },
+
+  {
+    day: "tuesday",
+  },
+
+  {
+    day: "wednesday",
+  },
+
+  {
+    day: "thursday",
+  },
+
+  {
+    day: "friday",
   },
 ];

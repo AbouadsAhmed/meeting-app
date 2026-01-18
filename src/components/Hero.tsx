@@ -1,7 +1,18 @@
+"use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
+  const router = useRouter();
+  const { user } = useKindeBrowserClient();
+  useEffect(() => {
+    if (user) {
+      router.push("/dashboard");
+    }
+  });
   return (
     <div className="text-center mt-20 mx-auto max-w-3xl">
       <h1 className="text-[36px] md:text-[62px] text-[#039c96] ">
